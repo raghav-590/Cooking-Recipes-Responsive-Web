@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; 
+    line-height: 1.6;
+    background-color: #f4f4f4; 
+}
+
+/* Navigation Bar */
+
+nav {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 1.5rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px #6e6e6e;
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #2563eb; 
+}
+
+/* Home Page */
+
+.home-text h3 {
+    font-size: 2.9rem;
+    margin-top: 75px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.home-grid {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    padding: 60px 8%;
+    gap: 40px; 
+}
+
+.home-card {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid #1E1E1E;
+    border-radius: 16px;
+    background: #f4f4f4;
+}
+
+.home-card:nth-child(odd) {
+    margin-right: auto; 
+}
+
+.home-card:nth-child(even) {
+    margin-left: auto; 
+}
+
+.home-card h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.home-card-img {
+    width: 15rem;    
+    height: 15rem;
+    margin-left: 30px;
+}
+
+.footer-text {
+    background: #f4f4f4;
+    color: #1a1a1a;
+    padding: 1rem 8%;
+    text-align: center;
+}
+
+/* recipes Page */
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding: 60px 8%;
+    max-width: 1400px;
+}
+
+.recipe-card-veg,
+.recipe-card-nonveg {
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 16px; 
+    border: 1px solid #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.recipe-card-veg:nth-child(3),
+.recipe-card-nonveg:nth-child(3) {
+    grid-column: span 2;  
+}
+
+.recipe-card-veg h2,
+.recipe-card-nonveg h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.recipe-card-veg li ,
+.recipe-card-nonveg li {
+    color: #5a5f66;
+    font-size: 0.95rem;
+}
+
+.recipe-card-veg:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(3, 209, 30, 0.233);
+    border-color: #06c736;
+}
+
+.recipe-card-nonveg:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(209, 3, 3, 0.233);
+    border-color: #c70606;
+}
+
+.recipe-card-veg li a,
+.recipe-card-nonveg li a {
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.recipe-card-veg li a:hover {
+    color: #06c736;
+}
+
+.recipe-card-nonveg li a:hover {
+    color: #c70606;
+}
+
+.recipe-img {
+  width: 100%;  
+  height: 500px;
+  object-fit: cover; 
+  object-position: center; 
+  margin-top: 50px;
+}
+
+.icon {
+    width: 2.5rem;    
+    height: 2.5rem;
+    margin-left: 10px; 
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    
+    nav {
+        flex-direction: column;
+        padding: 1rem 5%;
+        gap: 15px;
+    }
+
+    .nav-links {
+        padding: 0;
+    }
+
+    .nav-links li a {
+        padding: 5px 10px;
+    }
+
+    .home-grid {
+        padding: 30px 5%; 
+    }
+
+    .home-card, 
+    .home-card:nth-child(even) {
+        flex-direction: column; 
+        width: 100%;            
+        margin: 0;             
+        text-align: center;
+    }
+
+    .home-card-img {
+        width: 100%;            
+        height: auto;           
+        margin: 20px 0 0 0;    
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr; 
+        padding: 30px 5%;
+    }
+
+    .recipe-card-veg:nth-child(3),
+    .recipe-card-nonveg:nth-child(3) {
+        grid-column: span 1;  
+    }
+
+    .recipe-img {
+        height: 300px; 
+    }
+
+    .home-text h3 {
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+}
