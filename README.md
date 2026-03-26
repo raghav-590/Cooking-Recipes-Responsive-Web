@@ -43,7 +43,7 @@ The Delicious Recipes
         5. Deployment: Hosted live via GitHub Pages.
 
     6. Installation & Usage
-        1. Clone the repository: git clone https://github.com/your-username/recipe-website.git
+        1. Clone the repository: git clone https://github.com/raghav-590/Cooking-Recipes-Responsive-Web
         2. Navigate to the project folder.
         3. Open index.html in any modern web browser.
 
